@@ -1,0 +1,3 @@
+[submodule "edm-message-service-consumer"]
+	path = edm-message-service-consumer
+	url = git@github.com:edvmorango/edm-message-service-consumer.git
