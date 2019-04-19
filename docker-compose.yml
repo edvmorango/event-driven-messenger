@@ -1,1 +1,25 @@
+version: '2'
 
+services:
+  dynamodb:
+    container_name: messenger_dynamodb
+    image: cnadiminti/dynamodb-local
+    restart: always
+    volumes:
+      - ./docker/db/dynamodb:/dynamodb_local_db
+    ports:
+      - 8000:8000
+  sqs-local:
+    container_name: messenger_sqs
+    image: vsouza/sqs-local
+    restart: always
+    ports:
+      - 9324:9324
+  sns-local:
+    container_name: messenger_sns
+    image: s12v/sns
+    environment:
+      - DB_PATH=/docker/snsdb/db.json
+    restart: always
+    ports:
+      - 9911:9911
