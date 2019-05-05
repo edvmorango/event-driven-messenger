@@ -11,10 +11,13 @@ services:
       - 8000:8000
   sqs-local:
     container_name: messenger_sqs
-    image: vsouza/sqs-local
+    image:  roribio16/alpine-sqs
     restart: always
     ports:
       - 9324:9324
+      - 9325:9325
+    stdin_open: true
+    tty: true
   sns-local:
     container_name: messenger_sns
     image: s12v/sns
