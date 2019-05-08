@@ -9,21 +9,28 @@ services:
       - ./docker/db/dynamodb:/dynamodb_local_db
     ports:
       - 8000:8000
-  sqs-local:
-    container_name: messenger_sqs
-    image:  roribio16/alpine-sqs
-    restart: always
+  sqs:
+    image: s12v/elasticmq
     ports:
       - 9324:9324
-      - 9325:9325
-    stdin_open: true
-    tty: true
     volumes:
-      - ./opt/sqs-conf:/opt/custom
+      - ./config/elasticmq.conf:/etc/elasticmq/elasticmq.conf 
+  #sqs-local:
+  #  container_name: messenger_sqs-alpine
+  #  image:  roribio16/alpine-sqs
+  #  restart: always
+  #  ports:
+  #    - 9324:9324
+  #    - 9325:9325
+  #  volumes:
+  #    - ./config:/opt/custom
+  #    - ./config/elasticmq.conf:/etc/elasticmq/elasticmq.conf
   sns-local:
     container_name: messenger_sns
     image: s12v/sns
-    environment:
-      - DB_PATH=/docker/snsdb/db.json
     ports:
       - 9911:9911
+    volumes:
+      - ./config/db.json:/etc/sns/db.json
+    depends_on:
+      - sqs
