@@ -15,16 +15,6 @@ services:
       - 9324:9324
     volumes:
       - ./config/elasticmq.conf:/etc/elasticmq/elasticmq.conf 
-  #sqs-local:
-  #  container_name: messenger_sqs-alpine
-  #  image:  roribio16/alpine-sqs
-  #  restart: always
-  #  ports:
-  #    - 9324:9324
-  #    - 9325:9325
-  #  volumes:
-  #    - ./config:/opt/custom
-  #    - ./config/elasticmq.conf:/etc/elasticmq/elasticmq.conf
   sns-local:
     container_name: messenger_sns
     image: s12v/sns
@@ -34,3 +24,21 @@ services:
       - ./config/db.json:/etc/sns/db.json
     depends_on:
       - sqs
+  postgresql:
+    container_name: messages_db
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./config/postgresql.conf:/etc/postgresql/postgresql.conf
+    environment:
+      POSTGRES_DB: edm_database
+      POSTGRES_USER: edm_user
+      POSTGRES_PASSWORD: edm@123
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8002:8080
