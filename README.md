@@ -1,36 +1,41 @@
-The main idea of this project is to create example applications of how to solve real-world problems using *ZIO*.
+The main idea of this project is to create example applications of real-world problems using __*ZIO*__.
 
-Obs: Execute *createTablesDynamo.sh* when build the containers for the first time
+## Want to help out? ##
 
-Services: 
+If you have general feedback on how things could be better, feel free to post an issue or open a PR.
 
-edm-user-service-api: https://github.com/edvmorango/edm-user-service-api  (Http4s + Scanamo)
+If you are experienced with __ZIO/Cats-effect/Monix__ please point out any non-idiomatic fragment of code.
 
-edm-message-service-producer-api: https://github.com/edvmorango/edm-message-service-producer-api  (Http4s + sttp + sns)
 
-edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer (sqs)
 
-Done: 
-  -  Restful APIs using *Http4s* (must be improved) 
+## Services: ##
+
+edm-user-service-api: https://github.com/edvmorango/edm-user-service-api  __(ZIO + Http4s + Scanamo)__
+
+edm-message-service-producer-api: https://github.com/edvmorango/edm-message-service-producer-api  __(ZIO + Http4s + sttp + sns)__
+
+edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer __(ZIO + zio-sqs + doobie)__
+
+## Done:  
+  -  Restful APIs using __*Http4s*__ (must be improved) 
   - Unit Tests (must be improved)
-  - Http requests using *STTP*
-  - Message publishing using *SNS*
-  - *DynamoDB* as NoSQL database using *Scanamo*
+  - Http requests using __*STTP*__
+  - Message publishing using __*SNS*__
+  - *DynamoDB* as NoSQL database using __*Scanamo*__
 
-WIP:
-  - Typed errors through  ZIO[R,*E*,A]
-  - *SQS* queues being consumed by *zio-sqs*
-  - *PostsgreSQL* as event store using  *Doobie* or *Skunk* 
+## WIP:
+  - Typed errors through ZIO[R,__*E*__,A]
 
-TODOs: 
+## TODOs: 
   - Open API
   - Async API
   - Authentication (OAuth2)
   - gRPC example
   - Integration tests
 
+__Obs: Execute *createTablesDynamo.sh* after build the containers for the first time__
 
-Architecture: 
+## Architecture: 
 
 ![alt tag](https://raw.githubusercontent.com/edvmorango/event-driven-messenger/master/images/architecture.jpg?token=ABN2BMQ4PNYMVA6IR43HT4C43TI3W)
 
