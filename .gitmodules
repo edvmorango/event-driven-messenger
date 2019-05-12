@@ -1,9 +1,0 @@
-[submodule "edm-message-service-consumer"]
-	path = edm-message-service-consumer
-	url = git@github.com:edvmorango/edm-message-service-consumer.git
-[submodule "edm-user-service-api"]
-	path = edm-user-service-api
-	url = git@github.com:edvmorango/edm-user-service-api.git
-[submodule "edm-message-service-producer-api"]
-	path = edm-message-service-producer-api
-	url = git@github.com:edvmorango/edm-message-service-producer-api.git
