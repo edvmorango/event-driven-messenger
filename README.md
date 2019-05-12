@@ -14,7 +14,7 @@ edm-user-service-api: https://github.com/edvmorango/edm-user-service-api  __(ZIO
 
 edm-message-service-producer-api: https://github.com/edvmorango/edm-message-service-producer-api  __(ZIO + Http4s + sttp + sns)__
 
-edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer __(ZIO + sqs + doobie)__
+edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer __(ZIO + zio-sqs + doobie)__
 
 ## Done:  
   -  Restful APIs using __*Http4s*__ (must be improved) 
