@@ -37,7 +37,7 @@ __Obs: Execute *createTablesDynamo.sh* after build the containers for the first 
 
 ## Architecture: 
 
-![alt tag](https://raw.githubusercontent.com/edvmorango/event-driven-messenger/master/images/architecture.jpg?token=ABN2BMQ4PNYMVA6IR43HT4C43TI3W)
+![alt tag](https://raw.githubusercontent.com/edvmorango/event-driven-messenger/master/images/architecture.jpg)
 
 
 
