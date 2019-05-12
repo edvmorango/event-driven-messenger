@@ -10,11 +10,11 @@ If you are experienced with __ZIO/Cats-effect/Monix__ please point out any non-i
 
 ## Services: ##
 
-edm-user-service-api: https://github.com/edvmorango/edm-user-service-api  __(Http4s + Scanamo)__
+edm-user-service-api: https://github.com/edvmorango/edm-user-service-api  __(ZIO + Http4s + Scanamo)__
 
-edm-message-service-producer-api: https://github.com/edvmorango/edm-message-service-producer-api  __(Http4s + sttp + sns)__
+edm-message-service-producer-api: https://github.com/edvmorango/edm-message-service-producer-api  __(ZIO + Http4s + sttp + sns)__
 
-edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer __(zio + sqs + doobie)__
+edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer __(ZIO + sqs + doobie)__
 
 ## Done:  
   -  Restful APIs using __*Http4s*__ (must be improved) 
