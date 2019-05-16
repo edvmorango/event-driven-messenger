@@ -6,9 +6,12 @@ If you have general feedback on how things could be better, feel free to post an
 
 If you are experienced with __ZIO/Cats-effect/Monix__ please point out any non-idiomatic fragment of code.
 
+## Changelog
+
+### __19/05/16 - Typed failures at edm-message-service-producer-api__ 
 
 
-## Services: ##
+## Services##
 
 edm-user-service-api: https://github.com/edvmorango/edm-user-service-api  __(ZIO + Http4s + Scanamo)__
 
@@ -16,17 +19,17 @@ edm-message-service-producer-api: https://github.com/edvmorango/edm-message-serv
 
 edm-message-service-consumer: https://github.com/edvmorango/edm-message-service-consumer __(ZIO + zio-sqs + doobie)__
 
-## Done:  
+## Done 
   -  Restful APIs using __*Http4s*__ (must be improved) 
   - Unit Tests (must be improved)
   - Http requests using __*STTP*__
   - Message publishing using __*SNS*__
   - *DynamoDB* as NoSQL database using __*Scanamo*__
 
-## WIP:
+## WI
   - Typed errors through ZIO[R,__*E*__,A]
 
-## TODOs: 
+## TODO
   - Open API
   - Async API
   - Authentication (OAuth2)
